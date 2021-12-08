@@ -1,0 +1,23 @@
+{
+  "name": "messagingservice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "NODE_ENV=development node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "litha",
+  "license": "ISC",
+  "dependencies": {
+    "@bull-board/express": "^3.8.1",
+    "bull": "^4.1.1",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "nodemailer": "^6.7.2",
+    "redis": "^4.0.0",
+    "winston": "^3.3.3"
+  }
+}
