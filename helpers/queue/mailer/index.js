@@ -1,5 +1,5 @@
 const Queue = require('./queue')()
-const mailerQueue = require('../../mailTransporter')
+const sendMail = require('../../mailTransporter')
 const logger = require('../../logger')
 
 module.exports = ({ id, data }) => {
@@ -7,7 +7,7 @@ module.exports = ({ id, data }) => {
     setTimeout(async () => {
       try {
         const { recipient, subject, content } = data
-        const sendingEmail = await mailerQueue(recipient, subject, content)
+        const sendingEmail = await sendMail(recipient, subject, content)
         if (sendingEmail) {
           logger.info(`Success send email to ${recipient} with id ${id} and subject ${subject}`)
           resolve()
